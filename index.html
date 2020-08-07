@@ -7,15 +7,115 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="card.css">
   <!--Website data-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Convention Data</title>
-</head>
-<body>
 
+  <script>
+  window.onload = function () {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+  	animationEnabled: true,
+  	theme: "light2",
+  	title:{
+  		text: "Covid vs Anime"
+  	},
+  	axisX:{
+  		valueFormatString: "MMM",
+  		crosshair: {
+  			enabled: true,
+  			snapToDataPoint: true
+  		}
+  	},
+  	axisY: {
+  		title: "Number of Conventions",
+  		includeZero: true,
+  		crosshair: {
+  			enabled: true
+  		}
+  	},
+  	toolTip:{
+  		shared:true
+  	},
+  	legend:{
+  		cursor:"pointer",
+  		verticalAlign: "bottom",
+  		horizontalAlign: "left",
+  		dockInsidePlotArea: true,
+  		itemclick: toogleDataSeries
+  	},
+  	data: [{
+  		type: "line",
+  		showInLegend: true,
+  		name: "Total Conventions Planned",
+  		markerType: "square",
+  		xValueFormatString: "MMM, YYYY",
+  		color: "#F08080",
+  		dataPoints: [
+  			{ x: new Date(2020, 0, 1), y: 32 },
+  			{ x: new Date(2020, 1, 1), y: 50 },
+  			{ x: new Date(2020, 2, 1), y: 64 },
+  			{ x: new Date(2020, 3, 1), y: 55 },
+  			{ x: new Date(2020, 4, 1), y: 58 },
+  			{ x: new Date(2020, 5, 1), y: 51 },
+  			{ x: new Date(2020, 6, 1), y: 67 },
+  			{ x: new Date(2020, 7, 1), y: 66 },
+  			{ x: new Date(2020, 8, 1), y: 49 },
+  			{ x: new Date(2020, 9, 1), y: 49 },
+  			{ x: new Date(2020, 10, 1), y: 27 },
+  			{ x: new Date(2020, 11, 1), y: 7 }
+  		]
+  	},
+  	{
+  		type: "line",
+  		showInLegend: true,
+  		name: "Conventions Hosted",
+  		lineDashType: "dash",
+  		dataPoints: [
+  			{ x: new Date(2020, 0, 1), y: 32 },
+  			{ x: new Date(2020, 1, 1), y: 48 },
+  			{ x: new Date(2020, 2, 1), y: 20 },
+  			{ x: new Date(2020, 3, 1), y: 1 },
+  			{ x: new Date(2020, 4, 1), y: 0 },
+  			{ x: new Date(2020, 5, 1), y: 0 },
+  			{ x: new Date(2020, 6, 1), y: 4 },
+  			{ x: new Date(2020, 7, 1), y: 2 },
+  		]
+  	},{
+  		type: "line",
+  		showInLegend: true,
+  		name: "Conventions Still Happening",
+  		lineDashType: "dash",
+      color: "#E8A21F",
+  		dataPoints: [
+  			{ x: new Date(2020, 7, 1), y: 3 },
+  			{ x: new Date(2020, 8, 1), y: 22 },
+  			{ x: new Date(2020, 9, 1), y: 33 },
+  			{ x: new Date(2020, 10, 1), y: 21 },
+  			{ x: new Date(2020, 11, 1), y: 5 }
+  		]
+  	}]
+  });
+  chart.render();
+
+  function toogleDataSeries(e){
+  	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+  		e.dataSeries.visible = false;
+  	} else{
+  		e.dataSeries.visible = true;
+  	}
+  	chart.render();
+  }
+
+  }
+  </script>
+
+</head
+<body>
+  
 <div class="bg">
 <div class="container-fluid">
 
@@ -65,6 +165,313 @@
       <div class="col-sm"></div>
     </div>
 </div>
+<!--<center><h1>Attack on COVID</h1></center> -->
+  <span style="padding-left:20px">
+  <div>
+    <h2><center><b> Still On! </b></center></h2>
+  </div>
+  <div class="center row">
+    <div class="column card box">
+      <img src="Icons/Comiket.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+
+        <h4><b>Comiket Winter</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="column card box">
+      <img src="Icons/Anime_Zap.jpg" class="center" alt="Avatar" style="width:90%;">
+      <div class="container center_text">
+        <h4><b>Anime Zap!</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/SacAnime.jpg" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>SacAnime</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/TaiyouCon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Taiyou Con</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Dokomi.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Dokomi</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Feria_Mundo_Anime.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Feria Mundo Anime</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- //////////////////////// Moved to See you next year! /////////////////////////  -->
+  <div>
+    <h2><center><b> Moved to See you next year! </b></center></h2>
+  </div>
+
+
+  <div class=" center row" style="width:40%;">
+    <div class="column card box">
+      <img src="Icons/Crunchyroll_Expo.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Crunchyroll Expo</b></h4>
+        <div class="middle">
+          <div class="text">July 3-4</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="column card box">
+      <img src="Icons/Anime_Expo.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Anime Expo</b></h4>
+        <div class="middle">
+          <div class="text">September 4-6</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Otakuthon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Otakuthon</b></h4>
+        <div class="middle">
+          <div class="text">August 15–16</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- //////////////////////// Cancelled /////////////////////////  -->
+  <div>
+    <h2><center><b> Cancelled... </b></center></h2>
+  </div>
+  <div class="center row">
+    <div class="column card box">
+      <img src="Icons/A_Kon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>A-Kon</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="column card box">
+      <img src="Icons/Animethon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Animethon</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Anime_Boston.jpg" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Anime Boston</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Anime_Central.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Anime Central</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Anime_North.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Anime North</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Anime_Japan.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Anime Japan</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="center row">
+    <div class="column card box">
+      <img src="Icons/Otafest_Symbol.jpg" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Otafest</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="column card box">
+      <img src="Icons/Otakon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Otakon</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Nadeshicon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Nadeshicon</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/PortConMaine.jpg" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>PortConMaine</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/KuroNekoChan.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>KuroNekoChan</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Kawaii_Kon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Kawaii Kon</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="center row">
+    <div class="column card box">
+      <img src="Icons/AnimeNEXT.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>AnimeNEXT</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column card box">
+      <img src="Icons/AnimeFest.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Anime Fest</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/DeltaHCon.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>DeltaHCon</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/MobileBayAnimeFestival.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Mobile Bay Anime Festival</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/Sakura-Con.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Sakura-Con</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+    <div class="column card box">
+      <img src="Icons/HerosMadeInAsia.png" class="center" alt="Avatar" style="width:90%">
+      <div class="container center_text">
+        <h4><b>Heroes Made In Asia</b></h4>
+        <div class="middle">
+          <div class="text">See you next year!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="center" id="chartContainer" style="height: 370px; width: 80%;"></div>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </div>
+<!--
+<audio controls autoplay>
+  <source src="Icons/nyan.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio> -->
 </body>
 </html>
