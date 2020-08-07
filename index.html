@@ -15,39 +15,56 @@
   <title>Convention Data</title>
 </head>
 <body>
+
 <div class="bg">
-  <div class="container-fluid">
-    <div class="row"></div>
-    <div class="row">
-    <!--Insert stuff here-->
+<div class="container-fluid">
 
-    <!--Stop here-->
-    </div>
-
-    <div class="row">
+    <!--Pi Chart 1 -->
+    <div class="row align-items-center">
       <div class="col-sm"></div>
       <div class="col-sm">
-      <canvas id="piChart" width="100" height="100"></canvas>
-      <script>
-      var chart = document.getElementById('piChart').getContext('2d');
-      var chartSettings = new Chart(chart, {
-          type: 'pie',
-          data: {
-            labels: ["Postponed","Cancelled","Scheduled"],
-            datasets: [{
-              label: 'INSERT DESCRIPTION HERE',
-              backgroundColor: 'rgba(24,158,24,0.54)',
-              data: [31,49,20]
-            }]
-          }
-        }
-      )
-      </script>
-    </div>
-    <div class="col-sm"></div>
-    </div>
 
-  </div>
+          <canvas id="piChart1" width="100" height="50%"></canvas>
+          <script>
+            //Set text color
+            Chart.defaults.global.defaultFontColor = '#ffffff';
+            var chart1 = document.getElementById('piChart1').getContext('2d');
+            var chartSettings = new Chart(chart1, {
+                type: 'pie',
+                data: {
+                  labels: ["Incomplete","Complete"],
+                  datasets: [{
+                    label: 'Completed and incomplete conventions',
+                    backgroundColor: ['rgba(253,112,11,0.54)','rgba(24,158,24,0.54)'],
+                    data: [24,76]
+                  }]
+                }
+              }
+            )
+          </script>
+      </div>
+      <!--PI chart 2-->
+      <div class="col-sm">
+        <canvas id="piChart" width="100" height="100"></canvas>
+        <script>
+          var chart = document.getElementById('piChart').getContext('2d');
+          var chartSettings = new Chart(chart, {
+              type: 'pie',
+              data: {
+                labels: ["Postponed","Cancelled","Scheduled"],
+                datasets: [{
+                  label: 'INSERT DESCRIPTION HERE',
+                  backgroundColor: ['rgba(253,112,11,0.54)','rgba(253,11,11,0.54)','rgba(24,158,24,0.54)'],
+                  data: [37,23,40]
+                }]
+              }
+            }
+          )
+        </script>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+</div>
 </div>
 </body>
 </html>
