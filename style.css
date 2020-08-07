@@ -28,6 +28,7 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  width:80%;
 }
 
 .box:hover .image {
@@ -39,7 +40,7 @@
 }
 
 .text {
-  background-color: #4CAF50;
+  background-color: #cc0099;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
