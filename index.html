@@ -112,10 +112,9 @@
 
   }
   </script>
-
 </head
 <body>
-  
+
 <div class="bg">
 <div class="container-fluid">
 
@@ -471,10 +470,17 @@
   <div class="center" id="chartContainer" style="height: 370px; width: 80%; padding-top:50px;"></div>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </div>
+
 <div style="padding-bottom:150px;"></div>
-<audio controls autoplay>
-  <source src="Icons/nyan.mp3" type="audio/mpeg">
+
+<audio controls autoplay id="myaudio">
+  <source src="Icons/Aoarashi_no_Ato_de.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+<script>
+  var audio = document.getElementById("myaudio");
+  audio.volume = 0.5;
+</script>
+
 </body>
 </html>
