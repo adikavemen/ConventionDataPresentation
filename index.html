@@ -17,25 +17,36 @@
 <body>
 <div class="bg">
   <div class="container-fluid">
-  <!--Insert stuff here-->
+    <div class="row"></div>
+    <div class="row">
+    <!--Insert stuff here-->
 
-  <!--Stop here-->
-    <!--<canvas id="piChart" width="500" height="500"></canvas>
-    <script>
-    var chart = document.getElementByID('piChart').getContext('2d');
-    var chartSettings = new Chart(chart, {
-        type: 'pie',
-        data: {
-          labels: [],
-          datasets: [{
-            label: 'INSERT DESCRIPTION HERE',
-            backgroundColor: 'rgba(24,158,24,0.54)',
-            data: [31,49,20]
-          }]
+    <!--Stop here-->
+    </div>
+
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+      <canvas id="piChart" width="100" height="100"></canvas>
+      <script>
+      var chart = document.getElementById('piChart').getContext('2d');
+      var chartSettings = new Chart(chart, {
+          type: 'pie',
+          data: {
+            labels: ["Postponed","Cancelled","Scheduled"],
+            datasets: [{
+              label: 'INSERT DESCRIPTION HERE',
+              backgroundColor: 'rgba(24,158,24,0.54)',
+              data: [31,49,20]
+            }]
+          }
         }
-      }
-    )
-  </script> -->
+      )
+      </script>
+    </div>
+    <div class="col-sm"></div>
+    </div>
+
   </div>
 </div>
 </body>
