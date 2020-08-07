@@ -55,6 +55,16 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
+hr{
+  width: 90%;
+}
+
+h2{
+  padding-top: 50px;
+  font-size: 64px;
+
+}
+
 .text {
   background-color: #cc0099;
   color: white;
