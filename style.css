@@ -15,7 +15,7 @@ body::-webkit-scrollbar-thumb {
 /* background image class */
 .bg{
   background-image: url(./images/nightBackground.png);
-  height: 100%;
+  height: 101%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

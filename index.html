@@ -25,6 +25,9 @@
     	},
     	axisX:{
     		valueFormatString: "MMM",
+        includeZero: false,
+        interval: 1,
+        intervalType: "month",
     		crosshair: {
     			enabled: true,
     			snapToDataPoint: true
@@ -97,6 +100,23 @@
     			{ x: new Date(2020, 10, 1), y: 21 },
     			{ x: new Date(2020, 11, 1), y: 5 }
     		]
+    	},{
+    		type: "line",
+    		showInLegend: true,
+    		name: "Total Number of COVID Cases(million)",
+        lineDashType: "dash",
+    		markerType: "cross",
+    		color: "#2B4AA6",
+    		dataPoints: [
+    			{ x: new Date(2020, 0, 1), y: 0 },
+    			{ x: new Date(2020, 1, 1), y: 0.01 },
+    			{ x: new Date(2020, 2, 1), y: 0.08 },
+    			{ x: new Date(2020, 3, 1), y: 0.88 },
+    			{ x: new Date(2020, 4, 1), y: 3.22 },
+    			{ x: new Date(2020, 5, 1), y: 6.12 },
+    			{ x: new Date(2020, 6, 1), y: 10.44 },
+          { x: new Date(2020, 7, 8), y: 19.36 },
+    		]
     	}]
     });
     chart.render();
@@ -115,9 +135,11 @@
 </head
 <body>
 <center>
+  <h1>
 <div class="bg">
 <div class="container-fluid">
 
+    <div style="background-color:rgba(147,153,171,1) width:20%;"><h1 style="color:white;">Attack on Covid: Anime Events in 2020</h1></div>
 
     <div class="row align-items-center">
       <div class="col-sm">
@@ -472,8 +494,9 @@
 
 <hr>
 
-<div style="padding-bottom:150px;"></div>
 
+<center><b>Men of Cave</b></center>
+<div style="padding-bottom:120px;"></div>
 <audio controls autoplay id="myaudio">
   <source src="Icons/Aoarashi_no_Ato_de.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
