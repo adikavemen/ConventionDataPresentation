@@ -15,102 +15,102 @@
   <title>Convention Data</title>
 
   <script>
-  window.onload = function () {
+    window.onload = function () {
 
-  var chart = new CanvasJS.Chart("chartContainer", {
-  	animationEnabled: true,
-  	theme: "light2",
-  	title:{
-  		text: "Covid vs Anime"
-  	},
-  	axisX:{
-  		valueFormatString: "MMM",
-  		crosshair: {
-  			enabled: true,
-  			snapToDataPoint: true
-  		}
-  	},
-  	axisY: {
-  		title: "Number of Conventions",
-  		includeZero: true,
-  		crosshair: {
-  			enabled: true
-  		}
-  	},
-  	toolTip:{
-  		shared:true
-  	},
-  	legend:{
-  		cursor:"pointer",
-  		verticalAlign: "bottom",
-  		horizontalAlign: "left",
-  		dockInsidePlotArea: true,
-  		itemclick: toogleDataSeries
-  	},
-  	data: [{
-  		type: "line",
-  		showInLegend: true,
-  		name: "Total Conventions Planned",
-  		markerType: "square",
-  		xValueFormatString: "MMM, YYYY",
-  		color: "#F08080",
-  		dataPoints: [
-  			{ x: new Date(2020, 0, 1), y: 32 },
-  			{ x: new Date(2020, 1, 1), y: 50 },
-  			{ x: new Date(2020, 2, 1), y: 64 },
-  			{ x: new Date(2020, 3, 1), y: 55 },
-  			{ x: new Date(2020, 4, 1), y: 58 },
-  			{ x: new Date(2020, 5, 1), y: 51 },
-  			{ x: new Date(2020, 6, 1), y: 67 },
-  			{ x: new Date(2020, 7, 1), y: 66 },
-  			{ x: new Date(2020, 8, 1), y: 49 },
-  			{ x: new Date(2020, 9, 1), y: 49 },
-  			{ x: new Date(2020, 10, 1), y: 27 },
-  			{ x: new Date(2020, 11, 1), y: 7 }
-  		]
-  	},
-  	{
-  		type: "line",
-  		showInLegend: true,
-  		name: "Conventions Hosted",
-  		lineDashType: "dash",
-  		dataPoints: [
-  			{ x: new Date(2020, 0, 1), y: 32 },
-  			{ x: new Date(2020, 1, 1), y: 48 },
-  			{ x: new Date(2020, 2, 1), y: 20 },
-  			{ x: new Date(2020, 3, 1), y: 1 },
-  			{ x: new Date(2020, 4, 1), y: 0 },
-  			{ x: new Date(2020, 5, 1), y: 0 },
-  			{ x: new Date(2020, 6, 1), y: 4 },
-  			{ x: new Date(2020, 7, 1), y: 2 },
-  		]
-  	},{
-  		type: "line",
-  		showInLegend: true,
-  		name: "Conventions Still Happening",
-  		lineDashType: "dash",
-      color: "#E8A21F",
-  		dataPoints: [
-  			{ x: new Date(2020, 7, 1), y: 3 },
-  			{ x: new Date(2020, 8, 1), y: 22 },
-  			{ x: new Date(2020, 9, 1), y: 33 },
-  			{ x: new Date(2020, 10, 1), y: 21 },
-  			{ x: new Date(2020, 11, 1), y: 5 }
-  		]
-  	}]
-  });
-  chart.render();
+    var chart = new CanvasJS.Chart("chartContainer", {
+    	animationEnabled: true,
+    	theme: "light2",
+    	title:{
+    		text: "Covid vs Anime"
+    	},
+    	axisX:{
+    		valueFormatString: "MMM",
+    		crosshair: {
+    			enabled: true,
+    			snapToDataPoint: true
+    		}
+    	},
+    	axisY: {
+    		title: "Number of Conventions",
+    		includeZero: true,
+    		crosshair: {
+    			enabled: true
+    		}
+    	},
+    	toolTip:{
+    		shared:true
+    	},
+    	legend:{
+    		cursor:"pointer",
+    		verticalAlign: "bottom",
+    		horizontalAlign: "left",
+    		dockInsidePlotArea: true,
+    		itemclick: toogleDataSeries
+    	},
+    	data: [{
+    		type: "line",
+    		showInLegend: true,
+    		name: "Total Conventions Planned",
+    		markerType: "square",
+    		xValueFormatString: "MMM, YYYY",
+    		color: "#F08080",
+    		dataPoints: [
+    			{ x: new Date(2020, 0, 1), y: 32 },
+    			{ x: new Date(2020, 1, 1), y: 50 },
+    			{ x: new Date(2020, 2, 1), y: 64 },
+    			{ x: new Date(2020, 3, 1), y: 55 },
+    			{ x: new Date(2020, 4, 1), y: 58 },
+    			{ x: new Date(2020, 5, 1), y: 51 },
+    			{ x: new Date(2020, 6, 1), y: 67 },
+    			{ x: new Date(2020, 7, 1), y: 66 },
+    			{ x: new Date(2020, 8, 1), y: 49 },
+    			{ x: new Date(2020, 9, 1), y: 49 },
+    			{ x: new Date(2020, 10, 1), y: 27 },
+    			{ x: new Date(2020, 11, 1), y: 7 }
+    		]
+    	},
+    	{
+    		type: "line",
+    		showInLegend: true,
+    		name: "Conventions Hosted",
+    		lineDashType: "dash",
+    		dataPoints: [
+    			{ x: new Date(2020, 0, 1), y: 32 },
+    			{ x: new Date(2020, 1, 1), y: 48 },
+    			{ x: new Date(2020, 2, 1), y: 20 },
+    			{ x: new Date(2020, 3, 1), y: 1 },
+    			{ x: new Date(2020, 4, 1), y: 0 },
+    			{ x: new Date(2020, 5, 1), y: 0 },
+    			{ x: new Date(2020, 6, 1), y: 4 },
+    			{ x: new Date(2020, 7, 1), y: 2 },
+    		]
+    	},{
+    		type: "line",
+    		showInLegend: true,
+    		name: "Conventions Still Happening",
+    		lineDashType: "dash",
+        color: "#E8A21F",
+    		dataPoints: [
+    			{ x: new Date(2020, 7, 1), y: 3 },
+    			{ x: new Date(2020, 8, 1), y: 22 },
+    			{ x: new Date(2020, 9, 1), y: 33 },
+    			{ x: new Date(2020, 10, 1), y: 21 },
+    			{ x: new Date(2020, 11, 1), y: 5 }
+    		]
+    	}]
+    });
+    chart.render();
 
-  function toogleDataSeries(e){
-  	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-  		e.dataSeries.visible = false;
-  	} else{
-  		e.dataSeries.visible = true;
-  	}
-  	chart.render();
-  }
+    function toogleDataSeries(e){
+    	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+    		e.dataSeries.visible = false;
+    	} else{
+    		e.dataSeries.visible = true;
+    	}
+    	chart.render();
+    }
 
-  }
+    }
   </script>
 </head
 <body>
@@ -120,31 +120,29 @@
 
 
     <div class="row align-items-center">
-      <div class="col-sm"></div>
       <div class="col-sm">
-
-          <canvas id="piChart1" width="100" height="50%"></canvas>
-          <script>
-            //Set text color
-            Chart.defaults.global.defaultFontColor = '#ffffff';
-            var chart1 = document.getElementById('piChart1').getContext('2d');
-            var chartSettings = new Chart(chart1, {
-                type: 'pie',
-                data: {
-                  labels: ["Incomplete","Complete"],
-                  datasets: [{
-                    label: 'Completed and incomplete conventions',
-                    backgroundColor: ['rgba(253,112,11,0.54)','rgba(24,158,24,0.54)'],
-                    data: [24,76]
-                  }]
-                }
+        <canvas id="piChart1" width="100" height="20%"></canvas>
+        <script>
+          //Set text color
+          Chart.defaults.global.defaultFontColor = '#ffffff';
+          var chart1 = document.getElementById('piChart1').getContext('2d');
+          var chartSettings = new Chart(chart1, {
+              type: 'pie',
+              data: {
+                labels: ["Upcoming Events","Completed Events"],
+                datasets: [{
+                  label: 'Completed and incomplete conventions',
+                  backgroundColor: ['rgba(253,112,11,0.54)','rgba(24,158,24,0.54)'],
+                  data: [24,76]
+                }]
               }
-            )
-          </script>
+            }
+          )
+        </script>
       </div>
 
       <div class="col-sm">
-        <canvas id="piChart" width="100" height="100"></canvas>
+        <canvas id="piChart" width="100" height="20%"></canvas>
         <script>
           var chart = document.getElementById('piChart').getContext('2d');
           var chartSettings = new Chart(chart, {
@@ -175,10 +173,10 @@
     <h2><center><b> Still On! </b></center></h2>
     <hr>
   </div>
-  <div class="center row">
+  <div class="center row0">
     <div class="column card box">
       <img src="Icons/Comiket.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
 
         <h4><b>Comiket Winter</b></h4>
         <div class="middle">
@@ -190,7 +188,7 @@
 
     <div class="column card box">
       <img src="Icons/Anime_Zap.jpg" class="center" alt="Avatar" style="width:90%;">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime Zap!</b></h4>
         <div class="middle">
           <div class="text">TBA</div>
@@ -200,7 +198,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/SacAnime.jpg" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>SacAnime</b></h4>
         <div class="middle">
           <div class="text">TBA</div>
@@ -210,7 +208,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/TaiyouCon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Taiyou Con</b></h4>
         <div class="middle">
           <div class="text">TBA</div>
@@ -220,7 +218,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Dokomi.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Dokomi</b></h4>
         <div class="middle">
           <div class="text">TBA</div>
@@ -230,7 +228,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Feria_Mundo_Anime.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Feria Mundo Anime</b></h4>
         <div class="middle">
           <div class="text">RBA</div>
@@ -245,10 +243,10 @@
   </div>
   <hr>
 
-  <div class=" center row" style="width:40%;">
+  <div class=" center row0" style="width:40%;">
     <div class="column card box">
       <img src="Icons/Crunchyroll_Expo.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Crunchyroll Expo</b></h4>
         <div class="middle">
           <div class="text">July 3-4</div>
@@ -259,7 +257,7 @@
 
     <div class="column card box">
       <img src="Icons/Anime_Expo.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime Expo</b></h4>
         <div class="middle">
           <div class="text">September 4-6</div>
@@ -269,7 +267,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Otakuthon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Otakuthon</b></h4>
         <div class="middle">
           <div class="text">August 15–16</div>
@@ -284,10 +282,10 @@
     <h2><center><b> Cancelled... </b></center></h2>
   </div>
     <hr>
-  <div class="center row">
+  <div class="center row0">
     <div class="column card box">
       <img src="Icons/A_Kon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>A-Kon</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -298,7 +296,7 @@
 
     <div class="column card box">
       <img src="Icons/Animethon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Animethon</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -308,7 +306,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Anime_Boston.jpg" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime Boston</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -318,7 +316,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Anime_Central.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime Central</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -328,7 +326,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Anime_North.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime North</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -338,7 +336,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Anime_Japan.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime Japan</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -348,11 +346,11 @@
     </div>
   </div>
 
-  <!-- Row 2 -->
-  <div class="center row">
+  <!-- row 2 -->
+  <div class="center row0">
     <div class="column card box">
       <img src="Icons/Otafest_Symbol.jpg" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Otafest</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -363,7 +361,7 @@
 
     <div class="column card box">
       <img src="Icons/Otakon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Otakon</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -373,7 +371,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Nadeshicon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Nadeshicon</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -383,7 +381,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/PortConMaine.jpg" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>PortConMaine</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -393,7 +391,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/KuroNekoChan.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>KuroNekoChan</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -403,7 +401,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Kawaii_Kon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Kawaii Kon</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -413,10 +411,10 @@
   </div>
 
   <!-- Row 3 -->
-  <div class="center row">
+  <div class="center row0">
     <div class="column card box">
       <img src="Icons/AnimeNEXT.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>AnimeNEXT</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -426,7 +424,7 @@
 
     <div class="column card box">
       <img src="Icons/AnimeFest.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Anime Fest</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -435,7 +433,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/DeltaHCon.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>DeltaHCon</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -444,7 +442,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/MobileBayAnimeFestival.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Mobile Bay Anime Festival</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -453,7 +451,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/Sakura-Con.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Sakura-Con</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -462,7 +460,7 @@
     </div>
     <div class="column card box">
       <img src="Icons/HerosMadeInAsia.png" class="center" alt="Avatar" style="width:90%">
-      <div class="container center_text">
+      <div class="container2 center_text">
         <h4><b>Heroes Made In Asia</b></h4>
         <div class="middle">
           <div class="text">See you next year!</div>
@@ -479,10 +477,12 @@
   <source src="Icons/Aoarashi_no_Ato_de.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+
+</div>
+</div>
 <script>
   var audio = document.getElementById("myaudio");
   audio.volume = 0.5;
 </script>
-
 </body>
 </html>

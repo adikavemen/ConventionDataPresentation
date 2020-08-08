@@ -10,7 +10,7 @@
 
 }
 
-.container {
+.container2 {
   padding: 2px 16px;
 }
 
@@ -30,7 +30,7 @@
   padding-top: 10px;
 }
 
-.row {
+.row0 {
     display: table;
     width: 80%; /*Optional*/
     table-layout: fixed; /*Optional*/
